@@ -25,8 +25,11 @@ Columns with even numbers (0-based indexing assumed) contain real parts of signa
 For example, for n=4 any row of the ASCII table contains the numbers in the following order:
 
 Column number: 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
+
 Re/Im:          R  I  R  I  R  I  R  I  R  I  R  I  R  I  R  I
+
 Sample:         1  1  2  2  3  3  4  4  1  1  2  2  3  3  4  4
+
 Antenna:        1  1  1  1  1  1  1  1  2  2  2  2  2  2  2  2
 
 The ASCII folder also contains the file read_stbc_codebook_from_ascii_file.m - MATLAB function for reading a codebook from these ASCII files. 
