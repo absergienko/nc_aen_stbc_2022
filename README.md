@@ -10,19 +10,21 @@ Alexander B. Sergienko, "Design of Codebooks for Space-Time Block Code with Nonc
 The codebooks are presented in two formats: as MATLAB data files (`*.mat`, folder `MAT`) and as ASCII files (`*.txt`, folder `ASCII`)
 
 File names have the following form: `cb_stbc_n*_M*`
+
 The number after "n" shows the number of samples in the codebook signals.
+
 The number after "M" shows the number of signals in the codebook (i.e., the number of bits that can be transmitted using this codebook is `log2(M)`)
-For example, the file `cb_stbc_n6_M16.txt` contains the codebook with M=16 signals (4 bits per signal) consisting of n=6 samples.
+
+For example, the file `cb_stbc_n6_M16.txt` contains the codebook with `M=16` signals (4 bits per signal) consisting of `n=6` samples.
+
 All codebooks are designed for 2 transmitting antennas.
 
-Every `.MAT` file contains a single variable with the name "ssc". This variable is a 2D complex-valued array with M rows and 2*n columns. 
-Every row of this array represents one signal from the codebook. 
-The first n columns contain the signal samples for the first transmitting antenna, remaining n columns contain the signal samples for the second transmitting antenna. 
+Every `.MAT` file contains a single variable with the name `ssc`. This variable is a 2D complex-valued array with `M` rows and `2*n` columns. Every row of this array represents one signal from the codebook. The first `n` columns contain the signal samples for the first transmitting antenna, remaining `n` columns contain the signal samples for the second transmitting antenna. 
 
-Every `.TXT` file contains an ASCII table of numbers with M rows and 4*n columns. Every row of the table represents one signal from the codebook. 
-The first 2*n columns contain the signal samples for the first transmitting antenna, remaining 2*n columns contain the signal samples for the second transmitting antenna. 
+Every `.TXT` file contains an ASCII table of numbers with `M` rows and `4*n` columns. Every row of the table represents one signal from the codebook. The first `2*n` columns contain the signal samples for the first transmitting antenna, remaining `2*n` columns contain the signal samples for the second transmitting antenna. 
+
 Columns with even numbers (0-based indexing assumed) contain real parts of signal samples, columns with odd numbers contain imaginary parts of signal samples. 
-For example, for n=4 any row of the ASCII table contains the numbers in the following order:
+For example, for `n=4` any row of the ASCII table contains the numbers in the following order:
 
 ```
 Column number: 00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
